@@ -14,5 +14,7 @@ describe 'User Can Edit An Article' do
     expect(current_path).to eq article_path("#{article_1.id}")
     expect(page).to have_content(Article.first.title)
     expect(page).to have_content(Article.first.body)
+    expect(page).to have_content("Article '#{Article.first.title}' Updated!")
+
   end
 end
